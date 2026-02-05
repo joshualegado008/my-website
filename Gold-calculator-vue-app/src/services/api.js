@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const BASE = 'http://localhost:3000/api'
+const BASE = 'https://gold-api-0rhb.onrender.com/api'
 
 export const api = {
   async register(user) {
@@ -14,7 +14,6 @@ export const api = {
   },
 
   async calculate(data) {
-    // Fixed: now accepts an object with all the data
     const res = await axios.post(`${BASE}/calc`, data)
     return res.data
   },
